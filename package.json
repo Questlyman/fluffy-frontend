@@ -1,6 +1,20 @@
 {
   "name": "fluffy-frontend",
   "version": "0.0.0",
+  "private": true,
+  "description": "This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.",
+  "homepage": "https://github.com/Biektau/fluffy-frontend#readme",
+  "bugs": {
+    "url": "https://github.com/Biektau/fluffy-frontend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biektau/fluffy-frontend.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +22,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^20.0.0",
     "@angular/compiler": "^20.0.0",
