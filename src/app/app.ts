@@ -11,6 +11,7 @@ export class App implements OnInit {
   protected title = 'fluffy-frontend';
   constructor(){}
   ngOnInit(): void {
-    document.body.classList.add('theme-dark');
+    const theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.body.classList.add(`theme-${theme}`)
   }
 }

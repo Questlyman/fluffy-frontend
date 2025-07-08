@@ -8,7 +8,9 @@
   list-style: none;
   text-decoration: none;
   font-family: 'Montserrat';
+  overflow-x: hidden;
 }
 body {
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    color: var(--text-color);
 }

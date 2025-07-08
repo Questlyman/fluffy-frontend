@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './header-component.scss'
 })
 export class HeaderComponent {
-
+  isMenuOpen: boolean = false;
+  langMenuOpen: boolean = false;
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+  toggleLangMenu() {
+    this.langMenuOpen = !this.langMenuOpen;
+  }
+  nav_items: string[] = ['Something', 'Contacts'];
 }
-console.log('fsdfsfsdffd')
+
