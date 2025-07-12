@@ -3,6 +3,7 @@ import { OnDestroy, OnInit } from '@angular/core';
 import { LocalizationService } from '../../../../core/localization-service';
 import { TranslateModule} from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { animate } from "motion"
 @Component({
   selector: 'app-header-component',
   imports: [TranslateModule],
@@ -39,7 +40,6 @@ export class HeaderComponent implements OnInit, OnDestroy{
   setLanguage(lang: string){
     this.config.setLanguage(lang);
   }
-  
-  nav_items: string[] = ['Something', 'Contacts'];
+  nav_items: string[] = ['Something', 'Contacts', 'Our Projects', 'W'];
   
 }
