@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core'
+import { RouterOutlet } from '@angular/router'
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App implements OnInit {
-  protected title = 'fluffy-frontend';
-  constructor(){}
+  protected title = 'fluffy-frontend'
   ngOnInit(): void {
-    const theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    const theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
     document.body.classList.add(`theme-${theme}`)
   }
 }

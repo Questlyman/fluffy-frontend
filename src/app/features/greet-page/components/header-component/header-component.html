@@ -1,44 +1,41 @@
 <div class="header">
-    <div class="logo_name">
-            {{ 'TITLE' | translate }}
-            <span class="divider"></span>
-            <div class="burger-transform"  (click)="toggleMenu()" >
-                <span class="line top"></span>
-                <span class="line bottom"></span>
-            </div>
-            <nav class="mobile-nav-overlay" [class.open]="isMenuOpen">
-                <ul>
-                    <div class="menu-top">
-                        <p>{{ 'TITLE' | translate }}</p>
-                        <div class="close-icon" (click)="toggleMenu()"></div>
-                    </div>
-                    <li>Lorem ipsum</li>
-                    <li>Dolor sit amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing elit</li>
-                    <li>🚀 Menu item</li>
-                </ul>
-            </nav>  
-        <div class="nav">
-            @for (item of nav_items; track item) {
-                <p class="nav_text">{{ item }}</p>
-            }
+  <div class="logo_name">
+    {{ 'TITLE' | translate }}
+    <span class="divider"></span>
+    <div class="burger-transform" (click)="toggleMenu()">
+      <span class="line top"></span>
+      <span class="line bottom"></span>
+    </div>
+    <nav class="mobile-nav-overlay" [class.open]="isMenuOpen">
+      <ul>
+        <div class="menu-top">
+          <p>{{ 'TITLE' | translate }}</p>
+          <div class="close-icon" (click)="toggleMenu()"></div>
         </div>
+        <li>Lorem ipsum</li>
+        <li>Dolor sit amet</li>
+        <li>Consectetur</li>
+        <li>Adipiscing elit</li>
+        <li>🚀 Menu item</li>
+      </ul>
+    </nav>
+    <div class="nav">
+      @for (item of nav_items; track item) {
+      <p class="nav_text">{{ item }}</p>
+      }
     </div>
-    <div class="lang-wrapper">
-        <div class="lang-menu" [class.open]="langMenuOpen">
-            @for (language of langNames; track language){
-                @if (language == current_lang) {
-                    <p class="lang-text selected">{{ languages[language] | translate }}</p>
-                }
-                @else {
-                    <p class="lang-text" (click)="setLanguage(language)">{{ languages[language] | translate }}</p>
-                }
-            }
-        </div>
+  </div>
+  <div class="lang-wrapper">
+    <div class="lang-menu" [class.open]="langMenuOpen">
+      @for (language of langNames; track language){ @if (language === current_lang) {
+      <p class="lang-text selected">{{ languages[language] | translate }}</p>
+      } @else {
+      <p class="lang-text" (click)="setLanguage(language)">{{ languages[language] | translate }}</p>
+      } }
     </div>
-    <div class="right-header">
-        <p class="material-icons lang-icon" (click)="toggleLangMenu()" [class.isActive]="langMenuOpen">language</p>
-        <button>{{ 'LANG_SWITCHER_TITLE' | translate }}</button>
-    </div>
+  </div>
+  <div class="right-header">
+    <p class="material-icons lang-icon" (click)="toggleLangMenu()" [class.isActive]="langMenuOpen">language</p>
+    <button>{{ 'LANG_SWITCHER_TITLE' | translate }}</button>
+  </div>
 </div>
