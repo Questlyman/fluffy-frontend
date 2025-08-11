@@ -18,7 +18,6 @@ export class LocalizationService {
     const brow_lang = this.translate.getBrowserLang()
     this.lang = local_lang && Object.keys(this.supported_langs).includes(local_lang) ? local_lang : brow_lang && Object.keys(this.supported_langs).includes(brow_lang) ? brow_lang : 'en'
     this.translate.use(this.lang)
-    console.log(this.lang)
     this.langService = new BehaviorSubject<string>(this.lang)
     this.refresh_lang$ = this.langService.asObservable()
   }

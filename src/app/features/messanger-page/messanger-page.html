@@ -1,0 +1,152 @@
+<div class="chat-layout">
+
+
+  <!-- Список каналов и пользователей -->
+  <div class="channel-list">
+    <h3>Chats</h3>
+
+    <div class="chat-preview">
+      <div class="avatar"></div>
+      <div class="content">
+        <strong>Richard Wilson</strong>
+        <div class="status">I'll add you to our team…</div>
+      </div>
+    </div>
+
+    <div class="chat-preview">
+      <div class="avatar" style="background: var(--accent);"></div>
+      <div class="content">
+        <strong>ICG chat</strong>
+        <div class="status">Let’s discuss this tomorrow…</div>
+      </div>
+    </div>
+
+    <div class="chat-preview">
+      <div class="avatar"></div>
+      <div class="content">
+        <strong>Sarah Parker</strong>
+        <div class="status">See you soon!</div>
+      </div>
+    </div>
+
+    <h3>Others</h3>
+    <div class="chat-preview">
+      <div class="avatar"></div>
+      <div class="content">
+        <strong>Fletcher Morse</strong>
+        <div class="status">You need to work, sorry</div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="chat-panel" #chat [class.menu-open]="IsRightMenuOpen">
+    <header class="app-header">
+      <div class="group-info" (click)="openRightMenu()">
+        <span class="group-name">Group Name</span>
+        <span class="members-number">256 участников</span>
+      </div>
+      <!-- Search -->
+      <label class="search">
+        <span class="material-icons icon" aria-hidden="true">search</span>
+        <input type="text" placeholder="Search" />
+      </label>
+
+      <!-- Settings -->
+      <button class="icon-btn" type="button" aria-label="Settings">
+        <span class="material-icons" aria-hidden="true">settings</span>
+      </button>
+
+      <!-- Bell (открывает твоё правое меню) -->
+      <button class="icon-btn" type="button" aria-label="Notifications" >
+        <span class="material-icons" aria-hidden="true">notifications</span>
+      </button>
+
+      <!-- Avatar -->
+      <div class="avatar-wrapper">
+        <button class="avatar-btn"></button>
+        <span class="status"></span>
+      </div>
+    </header>
+    <div class="message">
+      <span class="date">9 Sep 2024</span>
+    </div>
+
+    <div class="message">
+      <span class="user">Richard Wilson</span> added <span class="user">You</span>
+    </div>
+
+    <div class="message">
+      <span class="user">Conner Garcia:</span>
+      <span class="text">Hey guys! Don’t forget about our meeting next week!</span>
+    </div>
+
+    <div class="message">
+      <span class="user">Richard Wilson:</span>
+      <span class="text">Absolutely. I’ll be there!</span>
+    </div>
+
+    <div class="message">
+      <span class="date">10 Sep 2024</span>
+    </div>
+
+    <div class="message">
+      <span class="user">Lawrence Patterson:</span>
+      <span class="text">rwilson jparker I have a new game plan</span>
+    </div>
+
+    <div class="message">
+      <span class="user">Jaden Parker:</span>
+      <span class="text">Let’s discuss this tomorrow</span>
+    </div>
+
+    <div class="input-box">
+      <input type="text" placeholder="Write a message..." />
+      <div class="send">➤</div>
+    </div>
+  </div>
+
+  <!-- Правая панель -->
+  <div #sidepanel class="side-panel" [class.open]="IsRightMenuOpen">
+    <div class="files-panel">
+      <div class="file-entry">
+        <span class="icon">🖼️</span>
+        <span class="text">115 photos</span>
+      </div>
+      <div class="file-entry">
+        <span class="icon">📄</span>
+        <span class="text">208 files</span>
+      </div>
+      <div class="file-entry">
+        <span class="icon">🔗</span>
+        <span class="text">47 shared links</span>
+      </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+          <h4>Members</h4>
+          <span class="add-member-icon material-icons" title="Добавить участника">group_add</span>
+        </div>
+        <div class="member">
+          <div class="avatar"></div>
+          Richard Wilson
+          <span class="role">Admin</span>
+        </div>
+        <div class="member">
+          <div class="avatar"></div>
+          You
+        </div>
+        <div class="member">
+          <div class="avatar"></div>
+          Jaden Parker
+        </div>
+        <div class="member">
+          <div class="avatar"></div>
+          Jaden Parker
+        </div>
+        <div class="member">
+          <div class="avatar"></div>
+          Jaden Parker
+        </div>
+  </div>
+</div>
