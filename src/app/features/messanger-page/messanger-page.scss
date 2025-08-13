@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -8,12 +9,11 @@ html, body {
 }
 .chat-layout {
   display: flex;
-  height: 100vh; 
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
   transition: flex-basis 4.4s ease;
 }
-
 
 /* Каналы */
 .channel-list {
@@ -39,89 +39,91 @@ html, body {
   box-shadow: 0 0 20px #00000040;
 
   .app-header {
-  height: fit-content;
-  align-self: flex-end;
-  background: var(--surface);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 12px;
-  border-radius: 999px; /* как на картинке — капсула */
-  width: 100%;  
-  margin: 10px 12px;   /* отступ от краёв */
-  .app-header > :first-child {
-    margin-right: auto;
-  }
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: #111;
-  border-radius: 999px;
-  padding: 10px 14px;
-  min-width: fit-content;
-
-  .icon {
-    width: 25px;
-    height: 25px;
-    fill: white;
-    flex: 0 0 auto;
-    margin-top: 5px;
-  }
-
-  input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--text);
+    height: fit-content;
+    align-self: flex-end;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+    border-radius: 999px; /* как на картинке — капсула */
     width: 100%;
-
-    &::placeholder { color: var(--muted); }
-  }
-
-  &:focus-within {
-    box-shadow: 0 0 0 2px var(--ring) inset;
-  }
-}
-
-.icon-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: none;
-  display: inline-grid;
-  place-items: center;
-  cursor: pointer;
-  color: white;
-  background: #000;
-  &:hover{
-    color: var(--primary-color);
-  }
-}
-.avatar-wrapper {
-  position: relative;
-  display: flex; /* чтобы размеры подгонялись под кнопку */
-
-  .avatar-btn {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    border: none;
-    padding: 0;
-    border-radius: 999px;
-    overflow: hidden;
-    background: white;
-    cursor: pointer;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    margin: 10px 12px; /* отступ от краёв */
+    .app-header > :first-child {
+      margin-right: auto;
     }
   }
+
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #111;
+    border-radius: 999px;
+    padding: 10px 14px;
+    min-width: fit-content;
+
+    .icon {
+      width: 25px;
+      height: 25px;
+      fill: white;
+      flex: 0 0 auto;
+      margin-top: 5px;
+    }
+
+    input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text);
+      width: 100%;
+
+      &::placeholder {
+        color: var(--muted);
+      }
+    }
+
+    &:focus-within {
+      box-shadow: 0 0 0 2px var(--ring) inset;
+    }
+  }
+
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: none;
+    display: inline-grid;
+    place-items: center;
+    cursor: pointer;
+    color: white;
+    background: #000;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+  .avatar-wrapper {
+    position: relative;
+    display: flex;
+
+    .avatar-btn {
+      position: relative;
+      width: 35px;
+      height: 35px;
+      border: none;
+      padding: 0;
+      border-radius: 999px;
+      overflow: hidden;
+      background: white;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
     .status {
       position: absolute;
       right: 0px;
@@ -132,14 +134,14 @@ html, body {
       border-radius: 999px;
     }
   }
-  .group-info{
-    color:white;
+  .group-info {
+    color: white;
     margin-right: auto;
     margin-left: 60px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    .group-name{
+    .group-name {
       align-self: flex-start;
       font-size: larger;
     }
@@ -153,7 +155,7 @@ html, body {
 
 .input-box {
   margin-top: auto;
-  background-color:#1a1a1a;
+  background-color: #1a1a1a;
   border-radius: 1.2rem;
   padding: 0.7rem 1rem;
   display: flex;
@@ -173,128 +175,6 @@ html, body {
     cursor: pointer;
   }
 }
-
-/* Правая панель */
-.side-panel {
-  position: fixed;
-  right: 0;
-  height: 100%;
-  background-color: #00000000;
-  padding: 1.5rem;
-  overflow-y: auto;
-  transform: translateX(100%);
-  flex-direction: column;
-  align-items: center;
-  @media (max-width: 1024px) {
-    position: fixed;
-    width: 100%;
-    display: flex; 
-    background-color: #000000aa;
-    justify-content: center;
-    align-self: center;
-    overflow-y: scroll;
-  }
-}
-.files-panel {
-  background-color: #111; // такой же как у диалога
-  border-radius: 20px;
-  width: 90%;
-  padding: 1.5rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  @media (max-width: 1024px) {
-      width: 80%;
-    }
-  .panel-title {
-    font-size: 1rem;
-    color: white;
-    margin: 0;
-    margin-bottom: 0.8rem;
-  }
-
-  .file-entry {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    background-color: #1a1a1a; // такой же как у карточек
-    padding: 0.7rem 1rem;
-    border-radius: 12px;
-    transition: background-color 0.3s;
-    
-    .icon {
-      font-size: 1.2rem;
-    }
-
-    .text {
-      color: white;
-      font-size: 0.95rem;
-    }
-
-    &:hover {
-      background-color: #222;
-    }
-  }
-}
-.section {
-  background-color: #111;
-  border-radius: 20px;
-  width: 90%;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
-  @media (max-width: 1024px) {
-      width: 80%;
-    }
-  .member {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    background: #1a1a1a;
-    border-radius: 20px;
-    padding: 0.7rem 0.2rem;
-    width: 100%;
-    color: #fff;
-    .role {
-      background: var(--primary-color, #7289da);
-      color: #fff;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      padding: 0.1rem 0.6rem;
-      margin-left: 0.7rem;
-    }
-  }
-}
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  margin-bottom: 1rem;
-  position: relative;
-  h4 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: bold;
-  }
-  .add-member-icon {
-    font-size: 1.5rem;
-    color: var(--primary-color, #7289da);
-    cursor: pointer;
-    margin-top: 0.1rem;
-    margin-right: 0.1rem;
-    transition: color 0.2s;
-    &:hover {
-      color: #fff;
-    }
-  }
-}
-/* Остальное — как раньше */
 .chat-preview {
   display: flex;
   gap: 0.7rem;
