@@ -39,7 +39,7 @@
 
   <div class="chat-panel">
     <header class="app-header">
-      <div class="group-info" (click)="menu.openMenu()">
+      <div class="group-info" role="button" tabindex="0" (click)="menu.openMenu()">
         <span class="group-name">Group Name</span>
         <span class="members-number">256 участников</span>
       </div>
@@ -58,39 +58,40 @@
       </button>
 
       <div class="avatar-wrapper">
-        <button class="avatar-btn"></button>
+        <button class="avatar-btn">'</button>
         <span class="status"></span>
       </div>
     </header>
-    <div class="message">
-      <span class="date">9 Sep 2024</span>
+    <div class="chat">
+      <div class="message">
+        <span class="date">9 Sep 2024</span>
+      </div>
+
+      <div class="message"><span class="user">Richard Wilson</span> added <span class="user">You</span></div>
+      <div class="message">
+        <span class="user">Conner Garcia:</span>
+        <span class="text">Hey guys! Don’t forget about our meeting next week!</span>
+      </div>
+      <div class="message">
+        <span class="user">Richard Wilson:</span>
+        <span class="text">Absolutely. I’ll be there!</span>
+      </div>
+
+      <div class="message">
+        <span class="date">10 Sep 2024</span>
+      </div>
+
+      <div class="message">
+        <span class="user">Lawrence Patterson:</span>
+        <span class="text">rwilson jparker I have a new game plan</span>
+      </div>
+
+      <div class="message">
+        <span class="user">Jaden Parker:</span>
+        <span class="text">Let’s discuss this tomorrow</span>
+      </div>
     </div>
 
-    <div class="message"><span class="user">Richard Wilson</span> added <span class="user">You</span></div>
-
-    <div class="message">
-      <span class="user">Conner Garcia:</span>
-      <span class="text">Hey guys! Don’t forget about our meeting next week!</span>
-    </div>
-
-    <div class="message">
-      <span class="user">Richard Wilson:</span>
-      <span class="text">Absolutely. I’ll be there!</span>
-    </div>
-
-    <div class="message">
-      <span class="date">10 Sep 2024</span>
-    </div>
-
-    <div class="message">
-      <span class="user">Lawrence Patterson:</span>
-      <span class="text">rwilson jparker I have a new game plan</span>
-    </div>
-
-    <div class="message">
-      <span class="user">Jaden Parker:</span>
-      <span class="text">Let’s discuss this tomorrow</span>
-    </div>
     <div class="input-box">
       <input type="text" placeholder="Write a message..." />
       <div class="send">➤</div>

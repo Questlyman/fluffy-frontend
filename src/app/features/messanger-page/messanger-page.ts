@@ -1,6 +1,5 @@
-import { Component, ElementRef, ViewChild, OnInit, OnDestroy, inject } from '@angular/core'
+import { Component, ElementRef, ViewChild } from '@angular/core'
 import { TranslateModule } from '@ngx-translate/core'
-import { animate } from 'motion'
 import { MenuComponent } from './components/menu-component/menu-component'
 @Component({
   selector: 'app-messanger-page',
