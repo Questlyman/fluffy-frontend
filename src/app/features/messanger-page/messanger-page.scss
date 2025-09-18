@@ -46,14 +46,14 @@ body {
     align-items: center;
     gap: 12px;
     padding: 0 12px;
-    border-radius: 999px; /* как на картинке — капсула */
+    border-radius: 999px;
     width: 100%;
+    overflow: hidden;
     margin: 10px 12px; /* отступ от краёв */
     .app-header > :first-child {
       margin-right: auto;
     }
   }
-
   .search {
     display: flex;
     align-items: center;
@@ -152,7 +152,15 @@ body {
     }
   }
 }
-
+.chat {
+  .message-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow-y: scroll;
+    padding-left: 20px;
+    gap: 12px;
+  }
+}
 .input-box {
   margin-top: auto;
   background-color: #1a1a1a;
@@ -206,4 +214,7 @@ body {
   padding: 0.2rem 0.5rem;
   border-radius: 12px;
   font-size: 0.75rem;
+}
+::-webkit-scrollbar {
+  display: none;
 }

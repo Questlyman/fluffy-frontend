@@ -1,0 +1,54 @@
+<main class="auth-page">
+  <section class="auth-card" role="dialog" aria-labelledby="auth-title">
+    <header class="brand">
+      <div class="brand__dot"></div>
+      <h1 id="auth-title" class="brand__name">Fluffy</h1>
+    </header>
+
+    <p class="auth-subtitle">Войдите в аккаунт, чтобы продолжить</p>
+
+    <form class="auth-form" autocomplete="on">
+      <label class="field">
+        <span class="field__label">Email или логин</span>
+        <input class="field__control" type="text" name="login" placeholder="you@fluffy.io" required />
+      </label>
+
+      <label class="field">
+        <span class="field__label">Пароль</span>
+        <div class="field__with-action">
+          <input #showPasswordButton class="field__control" type="password" name="password" placeholder="••••••••" required />
+          <button
+            class="ghost-btn active"
+            type="button"
+            aria-label="Показать пароль"
+            title="Показать пароль"
+            (click)="showPassword()"
+            (mouseenter)="hoverShowPassword()"
+            (mouseleave)="hoverHidePassword()"
+            [class.active]="isPasswordVisible"
+          >
+            <span class="material-icons"> visibility </span>
+          </button>
+        </div>
+      </label>
+
+      <div class="form-row">
+        <label class="check">
+          <input type="checkbox" />
+          <span class="check__box"></span>
+          <span class="check__label">Запомнить меня</span>
+        </label>
+
+        <a class="link" href="#">Забыли пароль?</a>
+      </div>
+
+      <button class="btn-primary" type="submit">Войти</button>
+
+      <div class="divider"><span>или</span></div>
+
+      <div class="alt-actions">
+        <button class="btn-outline" type="button">Создать аккаунт</button>
+      </div>
+    </form>
+  </section>
+</main>

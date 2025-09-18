@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, OnInit, OnDestroy } from '@angular/core'
+import { Component, ElementRef, ViewChild } from '@angular/core'
 import { TranslateModule } from '@ngx-translate/core'
 import { animate } from 'motion'
 import { fromEvent, Subject, takeUntil } from 'rxjs'
@@ -19,7 +19,7 @@ export class MenuComponent {
       menu,
       { opacity: ['0%', '100%'] },
       {
-        duration: 0.5,
+        duration: 0.2,
       },
     )
     fromEvent<PointerEvent>(document, 'pointerdown') //подписка на закрытие меню
@@ -30,7 +30,7 @@ export class MenuComponent {
             menu,
             { opacity: ['100%', '0%'] },
             {
-              duration: 0.5,
+              duration: 0.2,
             },
           )
           setTimeout(() => {
